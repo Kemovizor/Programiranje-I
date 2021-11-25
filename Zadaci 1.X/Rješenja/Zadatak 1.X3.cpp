@@ -1,13 +1,17 @@
 #include<iostream>
 using namespace std;
-void main(){
+void main()
+{
 	int n;
 	do {
 		cout << "Unesite n: " << endl;
 		cin >> n;
-	} while (n < 0 || n>100);
+	} while (n <0);
+
 	float S = 0;
-	for (size_t i = 1; i < n; i++)
-		S += pow(i, 2)/sqrt(i);
+	for (int i = -5; i <= n; i++)
+	{
+		S += n * abs(i/pow(n, 2));
+	}
 	cout << "Suma (S) je: " << S << endl;
 }
