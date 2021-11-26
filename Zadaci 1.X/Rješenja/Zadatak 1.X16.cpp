@@ -13,15 +13,7 @@ bool isSlovo(char c) {
 	return isUpper(c) || isLower(c);
 }
 char uradiPomak(char c, int pomak) {
-	int donjaGranica = 0, gornjaGranica = 0;
-	if (isUpper(c)) {
-		donjaGranica = 'A'; // implicitna konverzija char -> ASCII integer
-		gornjaGranica = 'Z' + 1; // implicitna konverzija char->ASCII integer
-	}
-	else {
-		donjaGranica = 'a';
-		gornjaGranica = 'z' + 1;
-	}
+	int donjaGranica = 'A', gornjaGranica = 'Z' +1;
 	pomak = pomak % (gornjaGranica - donjaGranica);
 	// na ovaj se nacin pomak modulira (%) duzinom alfabeta (ukupnim brojem slova)
 	//tako se obezbjedjuje da vrijednost pomaka bude u okviru duzine alfabeta 
