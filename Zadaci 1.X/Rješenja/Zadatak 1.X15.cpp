@@ -3,6 +3,6 @@ using namespace std;
 
 void main()
 {
-		for (int i = char('a'); i <= char('z'); i += 2)
-					cout << char(i) << " ";
+		for (char i = 'a'; i <= 'z'; i += 2)
+				cout << i << " ";
 }
